@@ -1,0 +1,7 @@
+name = "lambda-theme"
+tags = ["Responsive", "Custom fonts"]
+features = ["blog","portfolio" ]
+
+[author]
+    name = "Abelino Romo"
+    homepage = "https://github.com/abelino/blog"

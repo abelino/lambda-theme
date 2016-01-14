@@ -1,0 +1,58 @@
+  <footer class="footer wow fadeInDown">
+        <div class="container">
+          <hr>
+          <p>Build with <span class="c-primary">HUGO</span></p>
+          <p>Designed and Developed with by <img src="{{ .Site.BaseURL }}images/heart-icon.png" alt="Love" /> <a href="#">Boucy Studio</a> and <a href="#">rrmodi88</a></p>
+          <p>&copy Abelino Romo 2015</p>
+        </div>
+      </footer>      
+      
+    </body>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="{{ .Site.BaseURL }}/js/jquery.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/bootstrap/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ .Site.BaseURL }}/js/bootstrap/ie10-viewport-bug-workaround.js"></script>
+    <!-- Animation -->
+    <script type="text/javascript" src="{{ .Site.BaseURL }}/animation/js/wow.min.js"></script>
+    <script type="text/javascript" src="{{ .Site.BaseURL }}/animation/js/wow.init.js"></script>
+    
+    <script type="text/javascript">
+	$(".navbar-toggle.left").click(function(e){
+	    $("body").removeClass("navbar-collapse-right");
+	    
+		$("body").toggleClass("navbar-collapse-left");
+	    
+	    e.stopPropagation();
+        });
+        
+	$(".navbar-toggle.right").click(function(e){
+	    $("body").removeClass("navbar-collapse-left");
+	    
+		$("body").toggleClass("navbar-collapse-right");
+	    
+	    e.stopPropagation();
+        });
+        
+	$(".search-icon").click(function(e){
+	    $("body").removeClass("navbar-collapse-left");
+            $("body").removeClass("navbar-collapse-right");
+	    
+	      $(".search").addClass("open");
+            $(".close-icon").click(function(){    
+              $(".search").removeClass("open");
+            });
+            e.stopPropagation();
+        });                
+        $("html,body").click(function(){
+            $("body").removeClass("navbar-collapse-left");
+            $("body").removeClass("navbar-collapse-right");
+        });        
+        
+    </script>
+    
+  </html>

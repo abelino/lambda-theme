@@ -1,0 +1,50 @@
+<nav class="navbar navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle left collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggle right navbar-toggle1 collapsed" data-toggle="collapse" data-target="#navbar-custom" aria-expanded="false" aria-controls="navbar-custom">
+              <span class="sr-only">Toggle navigation</span>
+              <img src="{{ .Site.BaseURL }}images/calendar.png" alt="Toggle" />
+            </button>                        
+            <div class="search">
+              <button type="submit" class="search-icon">
+                <img src="{{ .Site.BaseURL }}images/search-icon.png" alt="Search" />
+              </button>
+              <span class="close-icon search-icon">
+                <img src="{{ .Site.BaseURL }}images/close-icon.png" alt="Search" />
+              </span>
+              <input type="text" class="blog-search" placeholder="Search Hear" />
+            </div>
+            <a class="navbar-brand wow zoomIn" href="{{ .Site.BaseURL }}">
+              <img src="{{ .Site.BaseURL }}images/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse left collapse wow fadeInDown" data-wow-delay="0.2s">
+            <ul class="nav navbar-nav">
+              <li class="first" class="active"><a href="#">HOME</a></li>
+              <li><a href="{{ .Site.BaseURL }}pages/about">ABOUT</a></li>
+              <li><a href="{{ .Site.BaseURL }}pages/portfolio">PORTFOLIO</a></li>
+              <li class="last"><a href="{{ .Site.BaseURL }}pages/network">NETWORK</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+          <div class="navbar-custom">   
+            <div id="navbar-custom" class="navbar-collapse right collapse wow fadeInDown"  data-wow-delay="0.4s">
+              <ul class="nav navbar-nav">
+                <li class="first label-nav"><a href="#">Now</a></li>
+                <li><a href="#">November</a></li>
+                <li><a href="#">October</a></li>
+                <li><a href="#">2015</a></li>
+                <li class="active"><a href="#">2014</a></li>
+                <li><a href="#">2013</a></li>
+                <li><a href="#">2012</a></li>
+                <li class="last"><a href="#">2011</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </nav>
