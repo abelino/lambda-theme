@@ -1,0 +1,41 @@
+    {{ partial "head.html" . }}
+    {{ partial "header.html" . }}
+  <body>
+        <div class="main-container">
+        <div class="container">
+          <div class="blog-item-content wow fadeInDown" data-wow-delay="0.6s">
+            <div class="bg-default">
+              <h2 class="heading">{{ .Title }}</h2>
+              <div class="tag">
+               <ul class="list-inline">
+
+                {{ range .Params.tags }}
+                <li><a href="tags/{{ . | urlize }}">{{ . }}</a> </li>
+                {{ end }}
+              </ul>
+              </div>
+              <div class="blog-action">
+                <ul class="list-inline">
+                  <li><a href="#"><img src="{{ .Site.BaseURL }}images/date-icon.png" alt="Date" />{{ .Date.Format "January 2 2006" }}</a></li>
+                  <li><a href="#"><img src="{{ .Site.BaseURL }}images/word-icon.png" alt="Words" />{{ .WordCount }} Words</a></li>
+                  <li><a href="#"><img src="{{ .Site.BaseURL }}images/comments-icon.png" alt="Comments" />22 Comments</a></li>
+                </ul>
+              </div>
+              <div class="blog-content">
+                {{ .Content }}
+              </div>
+            </div>
+            <div class="button-set text-left">
+              <a href="{{ .Site.BaseURL }}" class="btn btn-warning"><span class="glyphicon icon glyphicon-arrow-left" aria-hidden="true"></span> Previous</a>
+            </div>
+          </div>         
+      
+        {{ partial "sharing.html" .}}
+        {{ partial "comments.html" .}}
+        </div>
+      </div>
+     
+
+  </body>
+      {{ partial "footer.html" .}}
+</html>

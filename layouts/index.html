@@ -1,0 +1,37 @@
+    {{ partial "head.html" . }}
+    {{ partial "header.html" . }}
+    <body>
+      <div class="main-container">
+        <div class="container">
+         {{ range first 10 .Data.Pages }}
+         {{ if eq .Type  "post" }}
+         
+         {{ $page := . }}
+         <div class="blog-item first wow fadeInDown" data-wow-delay="0.6s">
+          <div class="bg-default">
+            <a class="heading" href="{{ $page.Permalink }}">{{ .Title }}</a>
+            <div class="tag">
+              <ul class="list-inline">
+
+                {{ range .Params.tags }}
+                <li><a href="tags/{{ . | urlize }}">{{ . }}</a> </li>
+                {{ end }}
+              </ul>
+            </div>
+            <div class="blog-action">
+              <ul class="list-inline">
+                <li><a href="#"><img src="{{ .Site.BaseURL }}images/date-icon.png" alt="Date" />{{ .Date.Format "January 2 2006" }}</a></li>
+                <li><a href="#"><img src="{{ .Site.BaseURL }}images/word-icon.png" alt="Words" />{{ .WordCount }} Words</a></li>
+                <li><a href="#"><img src="{{ .Site.BaseURL }}images/comments-icon.png" alt="Comments" />22 Comments</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+        {{ end }} 
+        
+      </div>
+    </div>
+    {{ partial "footer.html" .}}
+  </body>
+  </html>
